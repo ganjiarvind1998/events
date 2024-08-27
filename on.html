@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Binding Example</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Inline event binding -->
+        <button class="btn" onclick="turnOn()">ON</button>
+        <button class="btn" onclick="turnOff()">OFF</button>
+        <div id="status">Status: OFF</div>
+    </div>
+
+    <script>
+        // Inline functions for event binding
+        function turnOn() {
+            document.getElementById('status').textContent = 'Status: ON';
+        }
+
+        function turnOff() {
+            document.getElementById('status').textContent = 'Status: OFF';
+        }
+    </script>
+
+</body>
+</html>

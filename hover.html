@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover and Event Listeners</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+
+        img {
+            display: block;
+            transition: opacity 0.5s ease;
+            width: 200px;
+        }
+
+        img:hover {
+            opacity: 0.5;
+        }
+
+        .btn {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/200" alt="Hover Image" id="hoverImage">
+        <button class="btn" id="hoverBtn">Show Hover Message</button>
+    </div>
+
+    <script>
+        // Event binding with addEventListener for image hover
+        document.getElementById('hoverImage').addEventListener('mouseover', function() {
+            console.log('Image is hovered over.');
+        });
+
+        document.getElementById('hoverImage').addEventListener('mouseout', function() {
+            console.log('Mouse left the image.');
+        });
+
+        // Add another event listener to a button
+        document.getElementById('hoverBtn').addEventListener('click', function() {
+            alert('You hovered over the image!');
+        });
+    </script>
+
+</body>
+</html>
